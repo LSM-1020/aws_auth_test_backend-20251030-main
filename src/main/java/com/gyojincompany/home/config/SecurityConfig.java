@@ -52,9 +52,9 @@ public class SecurityConfig {
 					.formLogin(form -> form
 						    .loginProcessingUrl("/api/auth/login")
 						    .defaultSuccessUrl("/api/auth/apicheck", true)
-						    .failureHandler((req, res, ex) -> {
-						        res.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-						    })
+						    // .failureHandler((req, res, ex) -> {
+						    //     res.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+						    // })
 						)
 					//로그아웃 처리 파트 설정
 					.logout(logout -> logout
